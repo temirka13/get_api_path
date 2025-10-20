@@ -35,15 +35,15 @@ class Api
 	{
 		let result = template;
 
-		const placeholders = template.match(/%\w+%/g);
+		const template_keys = template.match(/%\w+%/g);
 		
-		if (placeholders) {
-			placeholders.forEach(placeholder => {
-				const key = placeholder.slice(1, -1);
+		if (template_keys) {
+			template_keys.forEach(template_key => {
+				const key = template_key.slice(1, -1);
 				
 				if (object.hasOwnProperty(key)) {
-					const encodedValue = encodeURIComponent(object[key]);
-					result = result.replace(placeholder, encodedValue);
+					const value = encodeURIComponent(object[key]);
+					result = result.replace(template_key, value);
 				}
 			});
 		}
