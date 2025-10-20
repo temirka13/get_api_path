@@ -1,3 +1,4 @@
+```
 /*
     task
     1. Напишите функцию подготовки строки, которая заполняет шаблон данными из указанного объекта
@@ -78,3 +79,4 @@ console.log(JSON.stringify(api_paths));
 
 // Ожидаемый результат
 let expected_result = ["/api/items/20/John%20Dow","/api/items/20/QA","/api/items/20/100"];
+```
